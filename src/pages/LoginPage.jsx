@@ -92,7 +92,7 @@ function LoginPage(){
             //     </form>
             // </div>
 
-            <div style={{maxWidth:400,marin:"48px auto",padding:16}}>
+            <div style={{maxWidth:400,margin:'40px auto',padding:16}}>
                 <Card title="登录">
                     <p style = {{color:"#999",fontSize:12,marginBottom:16}}>
                         测试账号： admin /  123456

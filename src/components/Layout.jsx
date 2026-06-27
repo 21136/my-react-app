@@ -38,8 +38,15 @@ function Layout(){
                     {
                         isLoggedIn?(
                             <>
-                            <span>你好，{user}</span>
-                            <button type = "button" onClick={handleLogout}>退出</button>
+                            <span
+                            style={{
+                                margin:'640px',
+                                fontSize:'1.5rem'
+                            }}>你好，{user}</span>
+                            <button type = "button"
+                            style={{
+                                  
+                            }} onClick={handleLogout}>退出</button>
                             </>
                         ):(
                             <NavLink to = "/login" className="nav-link">登录</NavLink>

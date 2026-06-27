@@ -1,6 +1,6 @@
 .nav-link { 
     padding: 8px 14px; 
-    text-decoration: none; 
+    text-decoration: cadetblue; 
     color: #334155;
      }
 .nav-link.active { 
@@ -12,4 +12,9 @@
     color: #b20860;
     margin-top: 30px;
     margin-left: 50px;
+}
+.layout_nav{
+    margin-left: 560px;
+    font-size: 2rem;
+    /* color: #0891b2; */
 }

@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   flex: 1;
+  margin-left: auto;
   padding: 0 32px 32px;
 }
 
@@ -11,6 +12,7 @@
   color: var(--text);
   margin-top: -16px;
   margin-bottom: 32px;
+  margin-left: auto;
 }
 
 /* ===== 对应 <main> 里的每个 <section> ===== */

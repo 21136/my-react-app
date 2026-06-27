@@ -5,8 +5,8 @@ function HomePage() {
     return (
       <button type = "button"
       style={{
-        padding: "7px 20px",
-        margin:"40px 50px",
+        padding: '7px 20px',
+        margin:'60px 700px',
         background: "#0891b2",
         color: "#fff",
         border: "none",
