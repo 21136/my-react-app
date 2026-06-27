@@ -1,11 +1,12 @@
 import { useState, useEffect, useMemo } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Form, Input, message, Modal, Table, Button, Space } from "antd";
-import { useFetch } from "../hooks/useFetch.js";
-import useDebouncedValue from "../hooks/useDebouncedValue.js";
+import { useFetch } from "@/hooks/useFetch.js";
+import useDebouncedValue from "@/hooks/useDebouncedValue"
+import {API_BASE} from "@/config/env.js"
 import "./PostListPage.css";
 
-const POSTS_URL = "https://jsonplaceholder.typicode.com/posts?_limit=50";
+const POSTS_URL = `${API_BASE}/posts?_limit=50`;
 
 export function PostPreviewButton({ post }) {
   const [open, setOpen] = useState(false);

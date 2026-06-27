@@ -1,4 +1,4 @@
-import TodoApp from "../components/TodoApp";
+import TodoApp from "@/components/TodoApp";
 import { Modal, message } from "antd";
 
 function TodoPage() {
