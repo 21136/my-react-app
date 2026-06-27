@@ -1,0 +1,74 @@
+/* 加载 / 空状态 */
+.status {
+    text-align: center;
+    padding: 48px 24px;
+    color: #64748b;
+    font-size: 0.95rem;
+  }
+  
+  .error {
+    text-align: center;
+    padding: 48px 24px;
+    color: #dc2626;
+    font-size: 0.95rem;
+  }
+  
+  /* 页面容器 */
+  .post-list-page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 24px 20px 40px;
+    text-align: left;
+  }
+  
+  .post-list-page h1 {
+    margin: 0 0 20px;
+    font-size: 1.5rem;
+    color: #0f172a;
+  }
+  
+  /* 列表 */
+  .post-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .post-list li {
+    margin: 0;
+  }
+  
+  .post-list__link {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 14px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #fff;
+    color: #1e293b;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+  
+  .post-list__link:hover {
+    border-color: #0891b2;
+    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.12);
+    transform: translateY(-1px);
+  }
+  
+  .post-list__id {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0891b2;
+    background: #ecfeff;
+    padding: 2px 8px;
+    border-radius: 999px;
+    margin-top: 2px;
+  }

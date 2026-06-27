@@ -1,0 +1,26 @@
+import {create} from "zustand"
+import {persist} from "zustand/middleware"
+
+export const useAuthStore = create(
+    persist(
+        (set,get)=>({
+            token:null,
+            user:"",
+
+            get isLoggedIn(){
+                return Boolean(get().token)
+            },
+
+            login:(token,user)=>set({token,user}),
+
+            logout:()=>set({token:null,user:""}),
+        }),
+        {
+            name:"auth-storage",
+            partialize:(state)=>({
+                token:state.token,
+                user:state.user,
+            })
+        }
+    )
+)

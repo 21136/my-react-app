@@ -1,0 +1,136 @@
+/* ===== 对应 App.jsx 最外层 <div className="app"> ===== */
+.app {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 32px 32px;
+}
+
+/* ===== 对应 <p className="subtitle"> ===== */
+.subtitle {
+  color: var(--text);
+  margin-top: -16px;
+  margin-bottom: 32px;
+}
+
+/* ===== 对应 <main> 里的每个 <section> ===== */
+.app main section {
+  margin-bottom: 32px;
+}
+
+.app ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.app li {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: var(--social-bg);
+  color: var(--text-h);
+}
+
+.app footer {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  color: var(--text);
+}
+
+/* ===== 用户卡片列表 ===== */
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.user-list li {
+  padding: 0;
+  background: none;
+}
+
+/* ===== 对应 UserCard 组件里的 className="user-card" ===== */
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.user-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  padding: 16px;
+  max-width: 360px;
+}
+
+/* 每一行：左边 label 固定宽度，右边 input 对齐 */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.login-form label {
+  flex-shrink: 0;
+  width: 4em;          /* 固定标签宽度，两行 input 左边就对齐了 */
+  text-align: right;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.login-form input {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #0891b2;
+  box-shadow: 0 0 0 3px rgba(8, 145, 178, 0.15);
+}
+.login-form button[type="submit"] {
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  background: #0891b2;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-form button[type="submit"]:hover {
+  background: #0e7490;
+}

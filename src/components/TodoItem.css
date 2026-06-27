@@ -1,0 +1,37 @@
+.todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #fff;
+  }
+  
+  .todo-item--done span {
+    text-decoration: line-through;
+    color: #94a3b8;
+  }
+  
+  .todo-item_label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .todo-item_delete {
+    padding: 4px 10px;
+    border: 1px solid #fca5a5;
+    background: #fff;
+    color: #dc2626;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+  }
+  
+  .todo-item_delete:hover {
+    background: #fef2f2;
+  }

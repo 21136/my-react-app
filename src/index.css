@@ -1,0 +1,75 @@
+/* ===== 全局颜色变量（App.css 里用 var(--xxx) 引用）===== */
+:root {
+  --text: #6b6375;           /* 普通文字 */
+  --text-h: #08060d;         /* 标题文字 */
+  --bg: #fff;                /* 页面背景 */
+  --border: #e5e4e7;         /* 边框、分隔线 */
+  --accent: #aa3bff;         /* 链接等高亮色 */
+  --social-bg: rgba(244, 243, 236, 0.5); /* 技能标签背景 */
+
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  color: var(--text);
+  background: var(--bg);
+}
+
+/* 系统深色模式时自动换色 */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #9ca3af;
+    --text-h: #f3f4f6;
+    --bg: #16171d;
+    --border: #2e303a;
+    --accent: #c084fc;
+    --social-bg: rgba(47, 48, 58, 0.5);
+  }
+}
+
+/* ===== 对应 index.html 的 <body> ===== */
+body {
+  margin: 0;
+}
+
+/* ===== 对应 index.html 的 <div id="root">，React 整个 App 挂在这里 ===== */
+#root {
+  max-width: 720px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  box-sizing: border-box;
+}
+
+/* ===== App.jsx 里没写 className 的标签，统一在这里设基础样式 ===== */
+h1,
+h2,
+h3 {
+  color: var(--text-h);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 32px 0 8px;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 12px;
+}
+
+h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: var(--accent);
+}

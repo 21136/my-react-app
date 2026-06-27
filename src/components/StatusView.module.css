@@ -1,0 +1,10 @@
+.status {
+    text-align: center;
+    padding: 2rem;
+    color: blue;
+}
+.error {
+    text-align: center;
+    padding: 2rem;
+    color: #dc2626;
+}
