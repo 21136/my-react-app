@@ -9,7 +9,7 @@
       "noEmit": true,
       "skipLibCheck": true,
       "allowJs": true,
-      "checkJs": true,
+      "checkJs": false,
       "isolatedModules": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,

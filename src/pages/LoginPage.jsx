@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { mockLogin } from "../api/mockLogin.js";
-import { useLocalstorage } from "../hooks/useLocalStorage.js";
-import { useAuthStore} from "../stores/useAuthStore.js"
+import { mockLogin } from "@/api/mockLogin.js";
+import { useLocalstorage } from "@/hooks/useLocalStorage.js";
+import { useAuthStore} from "@/stores/useAuthStore.js"
 import { Form, Input, Button, Alert, Card } from "antd";
 import "./LoginPage.css";
 
@@ -59,39 +59,7 @@ function LoginPage(){
         }
     }
         return (
-            // <div className = "login-page">
-            //     <form className = "login-card" onSubmit = {handleSubmit}>
-            //         <h1>登录</h1>
-            //         <p className = "login-card_hint">测试账号:admin / 123456</p>
-
-            //         {error && (
-            //             <p className = "login-card_error" role = "alert">{error}</p>
-            //         )}
-
-            //         <label htmlFor = "username">用户名</label>
-            //         <input
-            //             id="username"
-            //             type="text"
-            //             value={username}
-            //             onChange={(e) => setUsername(e.target.value)}
-            //             autoComplete="username"
-            //             disabled={submitting}
-            //             />
-            //             <label htmlFor="password">密码</label>
-            //         <input
-            //         id="password"
-            //         type="password"
-            //         value={password}
-            //         onChange={(e) => setPassword(e.target.value)}
-            //         autoComplete="current-password"
-            //         disabled={submitting}
-            //         />
-            //         <button type="submit" disabled={submitting}>
-            //         {submitting ? "登录中…" : "登录"}
-            //         </button>
-            //     </form>
-            // </div>
-
+          
             <div style={{maxWidth:400,margin:'40px auto',padding:16}}>
                 <Card title="登录">
                     <p style = {{color:"#999",fontSize:12,marginBottom:16}}>

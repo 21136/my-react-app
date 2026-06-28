@@ -5,8 +5,11 @@ import { useFetch } from "@/hooks/useFetch.js";
 import useDebouncedValue from "@/hooks/useDebouncedValue"
 import {API_BASE} from "@/config/env.js"
 import "./PostListPage.css";
+import { BulbOutlined } from "@ant-design/icons";
+import { ChatPanel } from "@/components/chat/ChatPanel.jsx";
 
 const POSTS_URL = `${API_BASE}/posts?_limit=50`;
+
 
 export function PostPreviewButton({ post }) {
   const [open, setOpen] = useState(false);
@@ -36,12 +39,16 @@ function PostListPage() {
   const [list, setList] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [editingId, setEditingId] = useState(null);
+  const [aiSearchOpen, setAiSearchOpen] = useState(false);
+
 
   const [keyword, setKeyword] = useState("");
   const debouncedKeyword = useDebouncedValue(keyword, 300);
 
   const [current, setCurrent] = useState(1);
   const [pageSize, setPageSize] = useState(10);
+
+
 
   useEffect(() => {
     if (fetchedPosts) setList(fetchedPosts);
@@ -70,6 +77,13 @@ function PostListPage() {
     setModalOpen(false);
     setEditingId(null);
     form.resetFields();
+  }
+  function openAiSearch() {
+    setAiSearchOpen(true);
+  }
+  
+  function closeAiSearch() {
+    setAiSearchOpen(false);
   }
 
   function handleSave(values) {
@@ -172,6 +186,9 @@ function PostListPage() {
           onChange={(e) => setKeyword(e.target.value)}
           style={{ width: 280 }}
         />
+          <Button icon={<BulbOutlined />} onClick={openAiSearch}>
+          AI 搜
+        </Button>
       </Space>
 
       <Table
@@ -201,6 +218,17 @@ function PostListPage() {
         onOk={() => form.submit()}
         destroyOnHidden
       >
+        <Modal
+        title="AI 智能搜索"
+        open={aiSearchOpen}
+        onCancel={closeAiSearch}
+        footer={null}
+        width={720}
+        destroyOnHidden
+        styles={{ body: { padding: 0 } }}
+      >
+        <ChatPanel mode="search" embedded seedInput={keyword} />
+      </Modal>
         <Form form={form} layout="vertical" onFinish={handleSave}>
           <Form.Item
             label="标题"

@@ -1,0 +1,58 @@
+/* src/components/chat/ChatPanel.css */
+.chat-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 420px;
+    max-height: 72vh;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background: #f8fafc;
+    overflow: hidden;
+  }
+  
+  .chat-panel__header {
+    padding: 12px 16px;
+    font-weight: 600;
+    background: #ede9fe;
+    color: #5b21b6;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .chat-panel__list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+  }
+  
+  .chat-panel__footer {
+    padding: 12px;
+    border-top: 1px solid #e2e8f0;
+    background: #fff;
+  }
+  
+  .chat-input {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+  }
+  
+  .chat-input .ant-input {
+    flex: 1;
+  }
+  .chat-panel--embedded {
+    border: none;
+    border-radius: 0;
+    max-height: none;
+    min-height: 0;
+    background: #f8fafc;
+  }
+  
+  .chat-panel--drawer {
+    height: calc(100vh - 110px);
+  }
+  
+  .chat-panel--embedded.chat-panel:not(.chat-panel--drawer) {
+    height: 65vh;
+    min-height: 420px;
+  }
